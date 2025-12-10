@@ -3,117 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Company Name</title>
+  <title>H.Z. Management Plus (M) Sdn Bhd</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background-color: #f4f6f9;
+      background: #f6f8fc;
       color: #333;
-      line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
-      background: #1f4fd8;
-      color: #fff;
-      padding: 40px 20px;
+      background: linear-gradient(to right, #0f2c67, #1f4fd8);
+      color: white;
+      padding: 100px 20px 90px;
       text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+      z-index: 999;
+    }
+
+    nav a {
+      color: #1f4fd8;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      animation: slideUp 1s ease;
     }
 
-    .box {
-      background: #fff;
-      padding: 30px;
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #0f2c67;
       margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      font-size: 2rem;
     }
 
-    h1, h2 {
-      margin-bottom: 15px;
-      color: #1f4fd8;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .services ul {
+    ul {
       list-style: none;
-      padding-left: 0;
     }
 
-    .services ul li {
-      padding: 8px 0;
+    ul li {
+      padding: 10px 0;
       border-bottom: 1px solid #eee;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 30px;
       background: #1f4fd8;
       color: white;
-      margin-top: 40px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 15px;
+      width: 100%;
+      background: #1f4fd8;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 16px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #0f2c67;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Your Company Name</h1>
-    <p>Professional Cleaning & Maintenance Services</p>
-  </header>
+<header>
+  <h1>H.Z. Management Plus (M) Sdn Bhd</h1>
+  <p>Professional Cleaning & Maintenance Services</p>
+</header>
 
-  <!-- About Us -->
-  <section class="box">
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#booking">Schedule</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="card">
     <h2>About Us</h2>
     <p>
-      We are a professional cleaning and maintenance company dedicated to delivering reliable, high-quality services. Our experienced team is committed to maintaining clean, safe, and hygienic environments for homes, offices, and commercial spaces.
+      H.Z. Management Plus (M) Sdn Bhd is a trusted professional cleaning service provider in Malaysia, delivering high-quality cleaning and maintenance solutions since 2007. We serve offices, commercial spaces, medical facilities, and residential properties with reliable, efficient, and customer-focused services.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- Mission & Vision -->
-  <section class="box">
-    <h2>Our Mission</h2>
-    <p>To provide dependable, efficient, and professional cleaning solutions that exceed client expectations.</p>
-
-    <h2>Our Vision</h2>
-    <p>To become a trusted leader in cleaning and maintenance services by delivering consistent quality and customer satisfaction.</p>
-  </section>
-
-  <!-- Services -->
-  <section class="box services">
+<section id="services">
+  <div class="card">
     <h2>Our Services</h2>
-    <ul>
-      <li>Office & Commercial Cleaning</li>
-      <li>Residential Cleaning</li>
-      <li>Washroom & Sanitary Cleaning</li>
-      <li>Window & Glass Cleaning</li>
-      <li>Carpet & Upholstery Cleaning</li>
-      <li>Floor Polishing & Maintenance</li>
-      <li>Post-Renovation & Move-in/Move-out Cleaning</li>
-      <li>Disinfection & Sanitization</li>
-    </ul>
-  </section>
+    <div class="grid">
+      <div>Office & Commercial Cleaning</div>
+      <div>Residential Cleaning</div>
+      <div>Window & Glass Cleaning</div>
+      <div>Washroom & Sanitary Cleaning</div>
+      <div>Carpet & Upholstery Cleaning</div>
+      <div>Floor Polishing & Maintenance</div>
+      <div>Post-Construction Cleaning</div>
+      <div>Move-in / Move-out Cleaning</div>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section class="box">
+<section id="gallery">
+  <div class="card">
+    <h2>Our Work Gallery</h2>
+    <div class="grid gallery">
+      <img src="https://source.unsplash.com/featured/?cleaning,office" />
+      <img src="https://source.unsplash.com/featured/?window,cleaning" />
+      <img src="https://source.unsplash.com/featured/?carpet,cleaning" />
+      <img src="https://source.unsplash.com/featured/?floor,polishing" />
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="card">
+    <h2>Schedule a Service</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <select>
+        <option>Select Service</option>
+        <option>Office Cleaning</option>
+        <option>Residential Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Move-in / Move-out</option>
+      </select>
+      <input type="date" required />
+      <textarea rows="4" placeholder="Additional Details"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
     <h2>Contact Us</h2>
-    <p>Email: yourcompany@email.com</p>
-    <p>Phone: +60 12-345 6789</p>
-    <p>Address: Your Company Address Here</p>
-  </section>
+    <p>Email: info@hzmanagementplus.com</p>
+    <p>Phone: +60 16-646 3253</p>
+    <p>Location: Kuala Lumpur, Malaysia</p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Your Company Name. All Rights Reserved.</p>
-  </footer>
+<footer>
+  <p>© 2025 H.Z. Management Plus (M) Sdn Bhd. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
